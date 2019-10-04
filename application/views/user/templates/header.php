@@ -67,7 +67,7 @@
             <li><a class="nav-link" href="#"><i class="fa fa-address-book" aria-hidden="true"></i> Page 3</a></li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="nav-link">Last Login : <?=$this->session->userdata('last_login')?></a></li>            
+            <!-- <li><a class="nav-link">Last Login : <?=$this->session->userdata('last_login')?></a></li>             -->
             <li><a class="nav-link" href="<?= base_url('user/setting') ?>"><i class="fa fa-user" aria-hidden="true"></i> Setting</a></li>
             <li><a class="nav-link" href="<?= base_url('user/signout')?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a></li>
           </ul>

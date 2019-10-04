@@ -14,7 +14,7 @@
 
 
 
-      <style>
+<style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 body {
   font-family: "Open Sans", sans-serif;
@@ -236,7 +236,5 @@ footer a, footer a:link {
   </p>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-
 </body>
 </html>

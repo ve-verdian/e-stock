@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Inventory EDP| Dashboard</title>
-	<?php $this->load->view("admin/_layouts/header.php") ?>
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-	<?php $this->load->view("admin/_layouts/navbar.php") ?>
-	<?php $this->load->view("admin/_layouts/sidebar.php") ?>
-<div class="wrapper">
-  <!-- Content Wrapper. Contains page content -->
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
         Dashboard
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -102,11 +88,4 @@
       <!-- /.row -->
       <!-- Main row -->
       <!-- /.row (main row) -->
-
     </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-	<?php $this->load->view("admin/_layouts/footer.php") ?>
-	</body>
-</html>

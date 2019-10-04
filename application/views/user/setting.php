@@ -13,7 +13,7 @@
         </div>
          <div class="col-md-9">
           <div class="dashboard-content-item">
-            <h4 class="dashboard-title">Change Password</h4>
+            <h4 class="dashboard-title">Ubah Password</h4>
               <hr>
 
               <form action="<?php echo base_url('user/proses_new_password') ?>" method="post">
