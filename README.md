@@ -9,4 +9,4 @@ Password : admin
 
 <strong>User Biasa</strong><br>
 Username : user<br>
-Password : user
+Password : abc123
