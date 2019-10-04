@@ -1,4 +1,4 @@
-# Web Aplikasi Inventory Gudang
+# Aplikasi Inventory
 
 Aplikasi Inventory Sederhana Menggunakan Framework Codeigniter dan Template AdminLTE
 
