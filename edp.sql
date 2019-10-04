@@ -126,11 +126,16 @@ CREATE TABLE `tb_upload_gambar_user` (
 --
 
 INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`, `ukuran_file`) VALUES
+<<<<<<< HEAD
 (1, 'zahidin', 'nopic5.png', '6.33'),
 (2, 'test', 'nopic4.png', '6.33'),
 (3, 'coba', 'logo_unsada1.jpg', '16.69'),
 (4, 'admin', 'nopic2.png', '6.33'),
 (5, 'user', 'nopic2.png', '6.33');
+=======
+(1, 'admin', 'nopic2.png', '6.33'),
+(2, 'user', 'nopic2.png', '6.33');
+>>>>>>> 2d10b40fe0de615626e2e39d1a036f74af2375cc
 
 -- --------------------------------------------------------
 
