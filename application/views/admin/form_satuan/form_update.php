@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Inventory EDP | Edit Satuan</title>
+  <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">

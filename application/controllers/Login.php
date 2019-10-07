@@ -9,9 +9,10 @@ class Login extends CI_Controller {
 	}
 	public function index()
 	{
-		    $data['token_generate'] = $this->token_generate();
-			$this->session->set_userdata($data);
-			$this->load->view('login/login',$data);
+		$data['title'] = 'Inventory EDP | Sign In';
+		$data['token_generate'] = $this->token_generate();
+		$this->session->set_userdata($data);
+		$this->load->view('login/login',$data);
 	}
 
 	public function token_generate(){
@@ -19,6 +20,7 @@ class Login extends CI_Controller {
 	}
 
 	public function register(){
+		$data['title'] = 'Inventory EDP | Sign Up';
 		$this->load->view('login/register');
 	}
 

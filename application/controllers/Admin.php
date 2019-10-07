@@ -11,6 +11,7 @@ class Admin extends CI_Controller{
 
   public function index(){
     if($this->session->userdata('status') == 'login' && $this->session->userdata('role') == 1){
+			$data['title'] = 'Inventory EDP | Dashboard';
       $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
       $data['stokBarangMasuk'] = $this->M_admin->sum('tb_barang_masuk','jumlah');
       $data['stokBarangKeluar'] = $this->M_admin->sum('tb_barang_keluar','jumlah');      
@@ -32,6 +33,7 @@ class Admin extends CI_Controller{
 
   public function profile()
   {
+		$data['title'] = 'Inventory EDP| User Profile';
     $data['token_generate'] = $this->token_generate();
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->session->set_userdata($data);
@@ -145,6 +147,7 @@ class Admin extends CI_Controller{
   ####################################
   public function users()
   {
+		$data['title'] = 'Inventory EDP | Data Users';
     $data['list_users'] = $this->M_admin->kecuali('user',$this->session->userdata('name'));
     $data['token_generate'] = $this->token_generate();
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
@@ -154,6 +157,7 @@ class Admin extends CI_Controller{
 
   public function form_user()
   {
+		$data['title'] = 'Inventory EDP | Tambah Data Users';
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
     $data['token_generate'] = $this->token_generate();
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
@@ -163,6 +167,7 @@ class Admin extends CI_Controller{
 
   public function update_user()
   {
+		$data['title'] = 'Inventory EDP | Update Data User';
     $id = $this->uri->segment(3);
     $where = array('id' => $id);
     $data['token_generate'] = $this->token_generate();
@@ -259,6 +264,7 @@ class Admin extends CI_Controller{
 
   public function form_barangmasuk()
   {
+		$data['title'] = 'Inventory EDP | Form Barang Masuk';
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->load->view('admin/form_barangmasuk/form_insert',$data);
@@ -266,15 +272,18 @@ class Admin extends CI_Controller{
 
   public function tabel_barangmasuk()
   {
+		
     $data = array(
               'list_data' => $this->M_admin->select('tb_barang_masuk'),
               'avatar'    => $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'))
-            );
+						);
+		$data['title'] = 'Inventory EDP | Data Barang Masuk'; 				
     $this->load->view('admin/tabel/tabel_barangmasuk',$data);
   }
 
   public function update_barang($id_transaksi)
   {
+		$data['title'] = 'Inventory EDP | Update Barang Masuk'; 
     $where = array('id_transaksi' => $id_transaksi);
     $data['data_barang_update'] = $this->M_admin->get_data('tb_barang_masuk',$where);
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
@@ -372,12 +381,14 @@ class Admin extends CI_Controller{
 
   public function form_satuan()
   {
+		$data['title'] = 'Inventory EDP | Tambah Satuan Barang';
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->load->view('admin/form_satuan/form_insert',$data);
   }
 
   public function tabel_satuan()
   {
+		$data['title'] = 'Inventory EDP | Data Satuan Barang';
     $data['list_data'] = $this->M_admin->select('tb_satuan');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->load->view('admin/tabel/tabel_satuan',$data);
@@ -385,6 +396,7 @@ class Admin extends CI_Controller{
 
   public function update_satuan()
   {
+		$data['title'] = 'Inventory EDP | Update Satuan Barang';
     $uri = $this->uri->segment(3);
     $where = array('id_satuan' => $uri);
     $data['data_satuan'] = $this->M_admin->get_data('tb_satuan',$where);
@@ -462,6 +474,7 @@ class Admin extends CI_Controller{
 
   public function barang_keluar()
   {
+		$data['title'] = 'Inventory EDP | Data Barang Keluar';
     $uri = $this->uri->segment(3);
     $where = array( 'id_transaksi' => $uri);
     $data['list_data'] = $this->M_admin->get_data('tb_barang_masuk',$where);
@@ -516,6 +529,7 @@ class Admin extends CI_Controller{
 
   public function tabel_barangkeluar()
   {
+		$data['title'] = 'Inventory EDP | Data Barang Keluar';
     $data['list_data'] = $this->M_admin->select('tb_barang_keluar');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->load->view('admin/tabel/tabel_barangkeluar',$data);

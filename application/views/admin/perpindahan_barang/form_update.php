@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Inventory EDP | Data Barang Masuk</title>
+  <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -148,6 +148,7 @@
   </div>
   <!-- /.content-wrapper -->
   <?php $this->load->view("admin/_layouts/footer.php") ?>
+	<script src="<?php echo base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
   <script type="text/javascript">
       $(".form_datetime").datetimepicker({
         format: 'dd/mm/yyyy',

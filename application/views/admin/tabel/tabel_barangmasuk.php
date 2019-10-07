@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Inventory EDP | Data Barang Masuk</title>
+  <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -103,7 +103,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <<?php $this->load->view("admin/_layouts/footer.php") ?>
+  <?php $this->load->view("admin/_layouts/footer.php") ?>
 <script>
 jQuery(document).ready(function($){
       $('.btn-delete').on('click',function(){

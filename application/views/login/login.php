@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Inventory EDP | Sign In</title>
+  <title><?= $title; ?></title>
 	<link rel="shortcut icon" href="<?=base_url('assets/img/rsia_family.jpeg')?>">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Inventory EDP| Dashboard</title>
+	<title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">

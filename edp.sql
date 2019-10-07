@@ -82,10 +82,10 @@ CREATE TABLE `tb_barang_masuk` (
 --
 
 INSERT INTO `tb_barang_masuk` (`id_transaksi`, `tanggal`, `lokasi`, `kode_barang`, `nama_barang`, `satuan`, `jumlah`) VALUES
-('WG-201904859276', '01/10/2019', 'EDP', 'MO-001', 'Monitor LG Flatron', 'Pcs', '5'),
-('WG-201981064973', '01/10/2019', 'EDP', 'LP-001', 'Laptop HP', 'Pcs', '2'),
-('WG-201991275380', '01/10/2019', 'EDP', 'MO-002', 'Keyboard', 'Pcs', '5'),
-('WG-201992638154', '01/10/2019', 'EDP', 'MO-003', 'Mouse Logitech', 'Pcs', '5');
+('WG-201904859276', '01/10/2019', 'EDP-IT', 'MO-001', 'Monitor LG Flatron', 'Pcs', '5'),
+('WG-201981064973', '01/10/2019', 'EDP-IT', 'LP-001', 'Laptop HP', 'Pcs', '2'),
+('WG-201991275380', '01/10/2019', 'EDP-IT', 'MO-002', 'Keyboard', 'Pcs', '5'),
+('WG-201992638154', '01/10/2019', 'EDP-IT', 'MO-003', 'Mouse Logitech', 'Pcs', '5');
 
 -- --------------------------------------------------------
 
@@ -126,16 +126,8 @@ CREATE TABLE `tb_upload_gambar_user` (
 --
 
 INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`, `ukuran_file`) VALUES
-<<<<<<< HEAD
-(1, 'zahidin', 'nopic5.png', '6.33'),
-(2, 'test', 'nopic4.png', '6.33'),
-(3, 'coba', 'logo_unsada1.jpg', '16.69'),
-(4, 'admin', 'nopic2.png', '6.33'),
-(5, 'user', 'nopic2.png', '6.33');
-=======
 (1, 'admin', 'nopic2.png', '6.33'),
 (2, 'user', 'nopic2.png', '6.33');
->>>>>>> 2d10b40fe0de615626e2e39d1a036f74af2375cc
 
 -- --------------------------------------------------------
 
