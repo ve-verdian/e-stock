@@ -98,7 +98,7 @@
   </div>
   <!-- /.content-wrapper -->
   <?php $this->load->view("admin/_layouts/footer.php") ?>
-	<script src="<?php echo base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	
 <!-- page script -->
 <script>
 jQuery(document).ready(function($){

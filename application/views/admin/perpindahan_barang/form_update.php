@@ -61,8 +61,8 @@
                   <input type="text" name="tanggal_keluar" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" required="" placeholder="Klik Disini">
                 </div>
                 <div class="form-group" style="margin-bottom:40px;">
-                  <label for="lokasi" style="margin-left:220px;display:inline;">Divisi</label>
-                  <input type="text" name="lokasi" style="margin-left:122px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->lokasi?>">
+                  <label for="divisi" style="margin-left:220px;display:inline;">Divisi</label>
+                  <input type="text" name="divisi" style="margin-left:122px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->divisi?>">
                 </div>
                 <div class="form-group" style="display:inline-block;">
                   <label for="kode_barang" style="width:73%;margin-left: 10px;">No. Seri / Kode Barang</label>
@@ -73,42 +73,12 @@
                   <input type="text" name="nama_barang" readonly="readonly" style="width:80%;margin-right: 60px;" class="form-control" id="nama_Barang" value="<?=$d->nama_barang?>">
 							</div>
 							<div class="form-group" style="display:inline-block;">
-                  <label for="unit_order" style="width:73%;">Unit Order</label>
-                  <select class="form-control" name="unit_order" style="width:80%;display:inline;">
-                    <option value="">-- Pilih --</option>
-                    <option value="Accounting">Accounting</option>
-                    <option value="Administration">Administration</option>
-                    <option value="Bayitabung-ffc">Bayi Tabung - FFC</option>
-                    <option value="Diklat">Diklat</option>
-                    <option value="Dokter">Dokter</option>
-                    <option value="EDP-IT">EDP - IT</option>
-                    <option value="Farmasi">Farmasi</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Fisioterapi">Fisioterapi</option>
-                    <option value="HRD">HRD</option>
-                    <option value="IGD">IGD</option>
-                    <option value="Kamar-Bayi">Kamar Bayi</option>
-                    <option value="Lab">Laboratorium</option>
-                    <option value="Lab-Cytogenetic">Lab - Cytogenetic</option>
-                    <option value="Logistik">Logistik</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Manajemen">Manajemen</option>
-                    <option value="Medis-Penunjang">Medis - Penunjang</option>
-                    <option value="MR">MR</option>
-                    <option value="OK">OK</option>
-                    <option value="PDCA">PDCA</option>
-                    <option value="Perawatan-Lt.1">Perawatan - Lt. 1</option>
-                    <option value="Perawatan-Lt.2">Perawatan - Lt. 2</option>
-                    <option value="Perawatan-Lt.3">Perawatan - Lt. 3</option>
-                    <option value="Poli-Anak">Poli-Anak</option>
-                    <option value="Poli-Gigi">Poli-Gigi</option>
-                    <option value="Poli-Obsgyn">Poli-Obsgyn</option>
-                    <option value="Purchasing">Purchasing</option>
-                    <option value="Radiologi">Radiologi</option>
-                    <option value="Tax&Audit">Tax & Audit</option>
-                    <option value="Umum">Umum</option>
-                    <option value="VK">VK</option>
-                    <option value="Others">Others</option>
+                  <label for="divisi" style="width:73%;">Unit Order</label>
+                  <select class="form-control" name="divisi" style="width:80%;display:inline;">
+									<option value="" selected="">-- Pilih --</option>
+                    <?php foreach($list_divisi as $ld){ ?>
+                    <option value="<?=$ld->kode_divisi?>"><?=$ld->nama_divisi?></option>
+                    <?php } ?>
                   </select>
                 </div>
                 <div class="form-group" style="display:inline-block;">

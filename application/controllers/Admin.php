@@ -478,7 +478,8 @@ class Admin extends CI_Controller{
   {
 		$data['title'] = 'Inventory EDP | Data Barang Keluar';
     $uri = $this->uri->segment(3);
-    $where = array( 'id_transaksi' => $uri);
+		$where = array( 'id_transaksi' => $uri);
+		$data['list_divisi'] = $this->M_admin->select('tb_divisi');
     $data['list_data'] = $this->M_admin->get_data('tb_barang_masuk',$where);
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));

@@ -82,6 +82,26 @@
             <a href="<?=base_url('admin/users')?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div> -->
+				<!-- ./col -->				
+				<!-- <div class="col-lg-3 col-xs-6"> -->
+          <!-- small box -->
+          <!-- <div class="small-box bg-red">
+            <div class="inner">
+            <?php if(!empty($jmlDivisi)){ ?>
+             <?php foreach($jmlDivisi as $jd){?>
+              <h3><?=$jd->jumlah?></h3>
+             <?php } ?>
+             <?php }else{?>
+              <h3>0</h3>
+             <?php } ?>
+              <p>Data Divisi</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="<?=base_url('admin/divisi')?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div> -->
         <!-- ./col -->
         <!-- <div class="col-lg-3 col-xs-6"> -->
           <!-- small box -->

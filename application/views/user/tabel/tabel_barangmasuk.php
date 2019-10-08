@@ -22,7 +22,7 @@
           <td><?=$no?></td>
           <!-- <td><?=$dd->id_transaksi?></td> -->
           <td><?=$dd->tanggal?></td>
-          <td><?=$dd->lokasi?></td>
+          <td><?=$dd->divisi?></td>
           <td><?=$dd->kode_barang?></td>
           <td><?=$dd->nama_barang?></td>
           <td><?=$dd->satuan?></td>

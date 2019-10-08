@@ -63,7 +63,7 @@
                   <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" placeholder="Klik Disini">
                 </div>
                 <div class="form-group" style="margin-bottom:40px;">
-                  <label for="nama_divisi" style="margin-left:220px;display:inline;">Divisi</label>
+                  <label for="divisi" style="margin-left:220px;display:inline;">Divisi</label>
                   <select class="form-control" name="divisi" style="margin-left:80px;width:20%;display:inline;">
                     <option value="" selected="">-- Pilih --</option>
                     <?php foreach($list_divisi as $ld){ ?>
@@ -98,7 +98,7 @@
               <!-- /.box-body -->
               <div class="box-footer" style="width:93%;">
                 <a type="button" class="btn btn-default" style="width:10%;margin-right:26%" onclick="history.back(-1)" name="btn_kembali"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a>
-                <a type="button" class="btn btn-info" style="width:14%;margin-right:29%" href="<?=base_url('admin/tabel_barangmasuk')?>" name="btn_listbarang"><i class="fa fa-table" aria-hidden="true"></i> Lihat List Barang</a>
+                <a type="button" class="btn btn-info" style="width:14%;margin-right:29%" href="<?=base_url('admin/tabel_barangmasuk')?>" name="btn_listbarang"><i class="fa fa-table" aria-hidden="true"></i> List Barang Masuk</a>
                 <button type="submit" style="width:20%" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
               </div>
             </form>

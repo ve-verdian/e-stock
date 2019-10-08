@@ -29,7 +29,7 @@
           <!-- <td><?=$dd->id_transaksi?></td> -->
           <td><?=$dd->tanggal_masuk?></td>
           <td><?=$dd->tanggal_keluar?></td>
-          <td><?=$dd->lokasi?></td>
+          <td><?=$dd->divisi?></td>
           <td><?=$dd->kode_barang?></td>
 					<td><?=$dd->nama_barang?></td>
           <!-- <td><?=$dd->satuan?></td> -->
