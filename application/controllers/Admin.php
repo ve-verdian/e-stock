@@ -265,6 +265,7 @@ class Admin extends CI_Controller{
   public function form_barangmasuk()
   {
 		$data['title'] = 'Inventory EDP | Form Barang Masuk';
+		$data['list_divisi'] = $this->M_admin->select('tb_divisi');
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->load->view('admin/form_barangmasuk/form_insert',$data);
@@ -284,7 +285,8 @@ class Admin extends CI_Controller{
   public function update_barang($id_transaksi)
   {
 		$data['title'] = 'Inventory EDP | Update Barang Masuk'; 
-    $where = array('id_transaksi' => $id_transaksi);
+		$where = array('id_transaksi' => $id_transaksi);
+		$data['list_divisi'] = $this->M_admin->select('tb_divisi');
     $data['data_barang_update'] = $this->M_admin->get_data('tb_barang_masuk',$where);
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
@@ -302,7 +304,7 @@ class Admin extends CI_Controller{
 
   public function proses_databarang_masuk_insert()
   {
-    $this->form_validation->set_rules('lokasi','Lokasi','required');
+    $this->form_validation->set_rules('divisi','Divisi','required');
     $this->form_validation->set_rules('kode_barang','Kode Barang','required');
     $this->form_validation->set_rules('nama_barang','Nama Barang','required');
     $this->form_validation->set_rules('jumlah','Jumlah','required');
@@ -311,7 +313,7 @@ class Admin extends CI_Controller{
     {
       $id_transaksi = $this->input->post('id_transaksi',TRUE);
       $tanggal      = $this->input->post('tanggal',TRUE);
-      $lokasi       = $this->input->post('lokasi',TRUE);
+      $divisi       = $this->input->post('divisi',TRUE);
       $kode_barang  = $this->input->post('kode_barang',TRUE);
       $nama_barang  = $this->input->post('nama_barang',TRUE);
       $satuan       = $this->input->post('satuan',TRUE);
@@ -320,7 +322,7 @@ class Admin extends CI_Controller{
       $data = array(
             'id_transaksi' => $id_transaksi,
             'tanggal'      => $tanggal,
-            'lokasi'       => $lokasi,
+            'divisi'       => $divisi,
             'kode_barang'  => $kode_barang,
             'nama_barang'  => $nama_barang,
             'satuan'       => $satuan,
@@ -338,7 +340,7 @@ class Admin extends CI_Controller{
 
   public function proses_databarang_masuk_update()
   {
-    $this->form_validation->set_rules('lokasi','Lokasi','required');
+    $this->form_validation->set_rules('divisi','Divisi','required');
     $this->form_validation->set_rules('kode_barang','Kode Barang','required');
     $this->form_validation->set_rules('nama_barang','Nama Barang','required');
     $this->form_validation->set_rules('jumlah','Jumlah','required');
@@ -347,7 +349,7 @@ class Admin extends CI_Controller{
     {
       $id_transaksi = $this->input->post('id_transaksi',TRUE);
       $tanggal      = $this->input->post('tanggal',TRUE);
-      $lokasi       = $this->input->post('lokasi',TRUE);
+      $divisi       = $this->input->post('divisi',TRUE);
       $kode_barang  = $this->input->post('kode_barang',TRUE);
       $nama_barang  = $this->input->post('nama_barang',TRUE);
       $satuan       = $this->input->post('satuan',TRUE);
@@ -357,7 +359,7 @@ class Admin extends CI_Controller{
       $data = array(
             'id_transaksi' => $id_transaksi,
             'tanggal'      => $tanggal,
-            'lokasi'       => $lokasi,
+            'divisi'       => $divisi,
             'kode_barang'  => $kode_barang,
             'nama_barang'  => $nama_barang,
             'satuan'       => $satuan,
@@ -491,7 +493,7 @@ class Admin extends CI_Controller{
       $id_transaksi   = $this->input->post('id_transaksi',TRUE);
       $tanggal_masuk  = $this->input->post('tanggal',TRUE);
       $tanggal_keluar = $this->input->post('tanggal_keluar',TRUE);
-      $lokasi         = $this->input->post('lokasi',TRUE);
+      $divisi         = $this->input->post('divisi',TRUE);
       $kode_barang    = $this->input->post('kode_barang',TRUE);
       $nama_barang    = $this->input->post('nama_barang',TRUE);
       $satuan         = $this->input->post('satuan',TRUE);
@@ -503,7 +505,7 @@ class Admin extends CI_Controller{
               'id_transaksi' => $id_transaksi,
               'tanggal_masuk' => $tanggal_masuk,
               'tanggal_keluar' => $tanggal_keluar,
-              'lokasi' => $lokasi,
+              'divisi' => $divisi,
               'kode_barang' => $kode_barang,
               'nama_barang' => $nama_barang,
               'satuan' => $satuan,
@@ -535,6 +537,95 @@ class Admin extends CI_Controller{
     $this->load->view('admin/tabel/tabel_barangkeluar',$data);
   }
 
+	####################################
+              // DIVISI
+  ####################################
 
+  public function divisi()
+  {
+		$data['title'] = 'Inventory EDP | Tambah Data Divisi';
+    $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
+    $this->load->view('admin/divisi/tambah_divisi',$data);
+  }
+
+  public function tabel_divisi()
+  {
+		$data['title'] = 'Inventory EDP | Data Divisi';
+    $data['list_data'] = $this->M_admin->select('tb_divisi');
+    $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
+    $this->load->view('admin/tabel/tabel_divisi',$data);
+  }
+
+  public function update_divisi()
+  {
+		$data['title'] = 'Inventory EDP | Update Data Divisi';
+    $uri = $this->uri->segment(3);
+    $where = array('id_divisi' => $uri);
+    $data['data_divisi'] = $this->M_admin->get_data('tb_divisi', $where);
+    $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
+    $this->load->view('admin/divisi/update_divisi',$data);
+  }
+
+  public function delete_divisi()
+  {
+    $uri = $this->uri->segment(3);
+    $where = array('id_divisi' => $uri);
+    $this->M_admin->delete('tb_divisi',$where);
+    redirect(base_url('admin/tabel_divisi'));
+  }
+
+  public function proses_divisi_insert()
+  {
+    $this->form_validation->set_rules('kode_divisi','Kode Divisi','trim|required|max_length[150]');
+    $this->form_validation->set_rules('nama_divisi','Nama Divisi','trim|required|max_length[150]');
+
+    if($this->form_validation->run() ==  TRUE)
+    {
+      $kode_divisi = $this->input->post('kode_divisi' ,TRUE);
+      $nama_divisi = $this->input->post('nama_divisi' ,TRUE);
+
+      $data = array(
+            'kode_divisi' => $kode_divisi,
+            'nama_divisi' => $nama_divisi
+      );
+      $this->M_admin->insert('tb_divisi',$data);
+
+      $this->session->set_flashdata('msg_berhasil','Data Divisi Berhasil Ditambahkan');
+      redirect(base_url('admin/divisi'));
+    }else {
+      $this->load->view('admin/divisi/tambah_divisi');
+    }
+  }
+
+  public function proses_divisi_update()
+  {
+    $this->form_validation->set_rules('kode_divisi','Kode Divisi','trim|required|max_length[150]');
+    $this->form_validation->set_rules('nama_divisi','Nama Divisi','trim|required|max_length[150]');
+
+    if($this->form_validation->run() ==  TRUE)
+    {
+      $id_divisi   = $this->input->post('id_divisi' ,TRUE);
+      $kode_divisi = $this->input->post('kode_divisi' ,TRUE);
+      $nama_divisi = $this->input->post('nama_divisi' ,TRUE);
+
+      $where = array(
+            'id_divisi' => $id_divisi
+      );
+
+      $data = array(
+            'kode_divisi' => $kode_divisi,
+            'nama_divisi' => $nama_divisi
+      );
+      $this->M_admin->update('tb_divisi',$data,$where);
+
+      $this->session->set_flashdata('msg_berhasil','Data Divisi Berhasil di Update');
+      redirect(base_url('admin/tabel_divisi'));
+    }else {
+      $this->load->view('admin/divisi/update_divisi');
+    }
+  }
+  ####################################
+            // END DIVISI
+  ####################################
 }
 ?>

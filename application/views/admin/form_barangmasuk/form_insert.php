@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Input Data Barang Masuk
+        Tambah Data Barang Masuk
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -32,7 +32,7 @@
             <!-- general form elements -->
           <div class="box box-primary" style="width:94%;">
             <div class="box-header with-border">
-              <h3 class="box-title"><i class="fa fa-archive" aria-hidden="true"></i> Tambah Data Barang Masuk</h3>
+              <h3 class="box-title"><i class="fa fa-archive" aria-hidden="true"></i> Input Data Barang Masuk</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -63,42 +63,12 @@
                   <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" placeholder="Klik Disini">
                 </div>
                 <div class="form-group" style="margin-bottom:40px;">
-                  <label for="nama_barang" style="margin-left:220px;display:inline;">Divisi</label>
-                  <select class="form-control" name="lokasi" style="margin-left:80px;width:20%;display:inline;">
-                    <option value="">-- Pilih --</option>
-                    <option value="Accounting">Accounting</option>
-                    <option value="Administration">Administration</option>
-                    <option value="Bayitabung-ffc">Bayi Tabung - FFC</option>
-                    <option value="Diklat">Diklat</option>
-                    <option value="Dokter">Dokter</option>
-                    <option value="EDP-IT">EDP - IT</option>
-                    <option value="Farmasi">Farmasi</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Fisioterapi">Fisioterapi</option>
-                    <option value="HRD">HRD</option>
-                    <option value="IGD">IGD</option>
-                    <option value="Kamar-Bayi">Kamar Bayi</option>
-                    <option value="Lab">Laboratorium</option>
-                    <option value="Lab-Cytogenetic">Lab - Cytogenetic</option>
-                    <option value="Logistik">Logistik</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Manajemen">Manajemen</option>
-                    <option value="Medis-Penunjang">Medis - Penunjang</option>
-                    <option value="MR">MR</option>
-                    <option value="OK">OK</option>
-                    <option value="PDCA">PDCA</option>
-                    <option value="Perawatan-Lt.1">Perawatan - Lt. 1</option>
-                    <option value="Perawatan-Lt.2">Perawatan - Lt. 2</option>
-                    <option value="Perawatan-Lt.3">Perawatan - Lt. 3</option>
-                    <option value="Poli-Anak">Poli - Anak</option>
-                    <option value="Poli-Gigi">Poli - Gigi</option>
-                    <option value="Poli-Obsgyn">Poli - Obsgyn</option>
-                    <option value="Purchasing">Purchasing</option>
-                    <option value="Radiologi">Radiologi</option>
-                    <option value="Tax&Audit">Tax & Audit</option>
-                    <option value="Umum">Umum</option>
-                    <option value="VK">VK</option>
-                    <option value="Others">Others</option>
+                  <label for="nama_divisi" style="margin-left:220px;display:inline;">Divisi</label>
+                  <select class="form-control" name="divisi" style="margin-left:80px;width:20%;display:inline;">
+                    <option value="" selected="">-- Pilih --</option>
+                    <?php foreach($list_divisi as $ld){ ?>
+                    <option value="<?=$ld->kode_divisi?>"><?=$ld->nama_divisi?></option>
+                    <?php } ?>
                   </select>
                 </div>
                 <div class="form-group" style="display:inline-block;">

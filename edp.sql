@@ -111,6 +111,56 @@ INSERT INTO `tb_satuan` (`id_satuan`, `kode_satuan`, `nama_satuan`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_satuan`
+--
+
+CREATE TABLE `tb_divisi` (
+  `id_dvisi` int(11) NOT NULL,
+  `kode_divisi` varchar(150) NOT NULL,
+  `nama_divisi` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_satuan`
+--
+
+INSERT INTO `tb_divisi` (`id_divisi`, `kode_divisi`, `nama_divisi`) VALUES
+(1, 'Accounting' , 'Accounting'),
+(2, 'Administration' , 'Administration'),
+(3, 'Bayitabung-ffc' , 'Bayi Tabung - FFC'),
+(4, 'Diklat' , 'Diklat'),
+(5, 'Dokter' , 'Dokter'),
+(6, 'EDP-IT' , 'EDP - IT'),
+(7, 'Farmasi' , 'Farmasi'),
+(8, 'Finance' , 'Finance'),
+(9, 'Fisioterapi' , 'Fisioterapi'),
+(10, 'HRD' , 'HRD'),
+(11, 'IGD' , 'IGD'),
+(12, 'Kamar-Bayi' , 'Kamar Bayi'),
+(13, 'Lab' , 'Laboratorium'),
+(14, 'Lab-Cytogenetic' , 'Lab - Cytogenetic'),
+(15, 'Logistik' , 'Logistik'),
+(16, 'Marketing' , 'Marketing'),
+(17, 'Manajemen' , 'Manajemen'),
+(18, 'Medis-Penunjang' , 'Medis - Penunjang'),
+(19, 'MR' , 'MR'),
+(20, 'OK' , 'OK'),
+(21, 'PDCA' , 'PDCA'),
+(22, 'Perawatan-Lt.1' , 'Perawatan - Lt. 1'),
+(23, 'Perawatan-Lt.2' , 'Perawatan - Lt. 2'),
+(24, 'Perawatan-Lt.3' , 'Perawatan - Lt. 3'),
+(25, 'Poli-Anak' , 'Poli - Anak'),
+(26, 'Poli-Gigi' , 'Poli - Gigi'),
+(27, 'Poli-Obsgyn' , 'Poli - Obsgyn'),
+(28, 'Purchasing' , 'Purchasing'),
+(29, 'Radiologi' , 'Radiologi'),
+(30, 'Tax&Audit' , 'Tax & Audit'),
+(31, 'Umum' , 'Umum'),
+(32, 'VK' , 'VK'),
+(33, 'Others' , 'Others');
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_upload_gambar_user`
 --
 

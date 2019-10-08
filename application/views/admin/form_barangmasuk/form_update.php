@@ -57,44 +57,8 @@
                   <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->tanggal?>">
                 </div>
                 <div class="form-group" style="margin-bottom:40px;">
-                  <label for="nama_barang" style="margin-left:220px;display:inline;">Divisi</label>
-                  <select class="form-control" name="lokasi" style="margin-left:80px;width:20%;display:inline;">
-                    <option value="<?=$d->lokasi?>"><?=$d->lokasi?></option>
-                    <option value="">-- Pilih --</option>
-                    <option value="Accounting">Accounting</option>
-                    <option value="Administration">Administration</option>
-                    <option value="Bayitabung-ffc">Bayi Tabung - FFC</option>
-                    <option value="Diklat">Diklat</option>
-                    <option value="Dokter">Dokter</option>
-                    <option value="EDP-IT">EDP - IT</option>
-                    <option value="Farmasi">Farmasi</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Fisioterapi">Fisioterapi</option>
-                    <option value="HRD">HRD</option>
-                    <option value="IGD">IGD</option>
-                    <option value="Kamar-Bayi">Kamar Bayi</option>
-                    <option value="Lab">Laboratorium</option>
-                    <option value="Lab-Cytogenetic">Lab - Cytogenetic</option>
-                    <option value="Logistik">Logistik</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Manajemen">Manajemen</option>
-                    <option value="Medis-Penunjang">Medis - Penunjang</option>
-                    <option value="MR">MR</option>
-                    <option value="OK">OK</option>
-                    <option value="PDCA">PDCA</option>
-                    <option value="Perawatan-Lt.1">Perawatan - Lt. 1</option>
-                    <option value="Perawatan-Lt.2">Perawatan - Lt. 2</option>
-                    <option value="Perawatan-Lt.3">Perawatan - Lt. 3</option>
-                    <option value="Poli-Anak">Poli - Anak</option>
-                    <option value="Poli-Gigi">Poli - Gigi</option>
-                    <option value="Poli-Obsgyn">Poli - Obsgyn</option>
-                    <option value="Purchasing">Purchasing</option>
-                    <option value="Radiologi">Radiologi</option>
-                    <option value="Tax&Audit">Tax & Audit</option>
-                    <option value="Umum">Umum</option>
-                    <option value="VK">VK</option>
-                    <option value="Others">Others</option>
-                  </select>
+                  <label for="divisi" style="margin-left:220px;display:inline;">Divisi</label>
+									<input type="text" name="divisi" style="margin-left:80px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->divisi?>">
                 </div>
                 <div class="form-group" style="display:inline-block;">
                   <label for="kode_barang" style="width:87%;margin-left: 12px;">No. Seri / Kode Barang</label>

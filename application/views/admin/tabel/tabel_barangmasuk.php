@@ -75,7 +75,7 @@
                     <td width="5%"><center><?=$no?></td>
                     <!-- <td><?=$dd->id_transaksi?></td> -->
                     <td width="5%"><center><?=$dd->tanggal?></td>
-                    <td width="10%"><center><?=$dd->lokasi?></td>
+                    <td width="10%"><center><?=$dd->divisi?></td>
                     <td width="12%"><center><?=$dd->kode_barang?></td>
                     <td width="15%"><?=$dd->nama_barang?></td>
                     <td width="5%"><center><?=$dd->satuan?></td>
