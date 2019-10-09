@@ -15,7 +15,8 @@ class Admin extends CI_Controller{
       $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
       $data['stokBarangMasuk'] = $this->M_admin->sum('tb_barang_masuk','jumlah');
       $data['stokBarangKeluar'] = $this->M_admin->sum('tb_barang_keluar','jumlah');      
-      $data['dataUser'] = $this->M_admin->numrows('user');
+			$data['dataUser'] = $this->M_admin->numrows('user');
+			$data['dataDivisi'] = $this->M_admin->numrows('tb_divisi');
       $this->load->view('admin/index',$data);
     }else {
       $this->load->view('login/login');
@@ -158,7 +159,7 @@ class Admin extends CI_Controller{
   public function form_user()
   {
 		$data['title'] = 'Inventory EDP | Tambah Data Users';
-    $data['list_satuan'] = $this->M_admin->select('tb_satuan');
+    $data['list_users'] = $this->M_admin->select('user');
     $data['token_generate'] = $this->token_generate();
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->session->set_userdata($data);
@@ -182,9 +183,8 @@ class Admin extends CI_Controller{
     $id = $this->uri->segment(3);
     $where = array('id' => $id);
     $this->M_admin->delete('user',$where);
-    $this->session->set_flashdata('msg_berhasil','User Behasil Di Delete');
+    $this->session->set_flashdata('msg_berhasil','User Behasil di Hapus');
     redirect(base_url('admin/users'));
-
   }
 
   public function proses_tambah_user()

@@ -240,6 +240,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `tb_divisi`
+  ADD PRIMARY KEY (`id_divisi`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -267,6 +273,12 @@ ALTER TABLE `tb_upload_gambar_user`
 ALTER TABLE `user`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
+
+--
+-- AUTO_INCREMENT for table `tb_satuan`
+--
+ALTER TABLE `tb_divisi`
+  MODIFY `id_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
