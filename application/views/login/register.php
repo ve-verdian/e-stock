@@ -191,21 +191,21 @@ footer a, footer a:link {
     <?php if($this->session->flashdata('msg')){ ?>
       <div class="alert alert-warning alert-dismissible">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Warning!</strong><br> <?php echo $this->session->flashdata('msg');?>
+          <strong>Warning!</strong><br> <?= $this->session->flashdata('msg');?>
      </div>
     <?php } ?>
 
     <?php if($this->session->flashdata('msg_terdaftar')){ ?>
       <div class="alert alert-success alert-dismissible">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Success</strong><br> <?php echo $this->session->flashdata('msg_terdaftar');?>
+          <strong>Success</strong><br> <?= $this->session->flashdata('msg_terdaftar');?>
      </div>
     <?php } ?>
 
     <?php if(validation_errors()){ ?>
     <div class="alert alert-warning alert-dismissible">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+        <strong>Warning!</strong><br> <?= validation_errors(); ?>
    </div>
   <?php } ?>
 
@@ -222,7 +222,7 @@ footer a, footer a:link {
 
     <i class="fa fa-key"></i>
 
-    <?php echo anchor(base_url('login'),'Sign In') ?><br>
+    <?= anchor(base_url('login'),'Sign In') ?><br>
 
     <!-- <a href="#">Forgot your password?</a> -->
 

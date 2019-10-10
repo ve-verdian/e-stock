@@ -42,14 +42,14 @@
               <?php if($this->session->flashdata('msg_berhasil')){ ?>
                 <div class="alert alert-success alert-dismissible" style="width:91%">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+                    <strong>Success!</strong><br> <?= $this->session->flashdata('msg_berhasil');?>
                </div>
               <?php } ?>
 
               <?php if(validation_errors()){ ?>
               <div class="alert alert-warning alert-dismissible">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+                  <strong>Warning!</strong><br> <?= validation_errors(); ?>
              </div>
             <?php } ?>
 
@@ -71,7 +71,7 @@
               <div class="box-footer" style="width:93%;">
                 <a type="button" class="btn btn-default" style="width:10%;margin-right:26%" onclick="history.back(-1)" name="btn_kembali"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a>
                 <a type="button" class="btn btn-info" style="width:13%;margin-right:29%" href="<?=base_url('admin/tabel_divisi')?>" name="btn_listdivisi"><i class="fa fa-table" aria-hidden="true"></i> List Data Divisi</a>
-                <button type="submit" style="width:20%" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
+                <button type="submit" style="width:20%" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
               </div>
             </form>
           </div>

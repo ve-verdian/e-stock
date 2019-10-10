@@ -42,7 +42,7 @@
               <?php if(validation_errors()){ ?>
               <div class="alert alert-warning alert-dismissible">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+                  <strong>Warning!</strong><br> <?= validation_errors(); ?>
              </div>
             <?php } ?>
 
@@ -102,7 +102,7 @@
 
               <div class="box-footer" style="width:93%;">
                 <a type="button" class="btn btn-default" style="width:10%" onclick="history.back(-1)" name="btn_kembali"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a>
-                <button type="submit" style="width:20%;margin-left:689px;" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>&nbsp;&nbsp;&nbsp;
+                <button type="submit" style="width:20%;margin-left:689px;" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>&nbsp;&nbsp;&nbsp;
               </div>
             </form>
           </div>
@@ -118,7 +118,7 @@
   </div>
   <!-- /.content-wrapper -->
   <?php $this->load->view("admin/_layouts/footer.php") ?>
-	<script src="<?php echo base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="<?= base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
   <script type="text/javascript">
       $(".form_datetime").datetimepicker({
         format: 'dd/mm/yyyy',

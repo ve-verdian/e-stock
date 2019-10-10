@@ -16,17 +16,17 @@
             <h4 class="dashboard-title">Ubah Password</h4>
               <hr>
 
-              <form action="<?php echo base_url('user/proses_new_password') ?>" method="post">
+              <form action="<?= base_url('user/proses_new_password') ?>" method="post">
 
                 <?php if($this->session->flashdata('msg_berhasil')){ ?>
                   <div class="alert alert-success alert-dismissible">
                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Success</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+                      <strong>Success</strong><br> <?= $this->session->flashdata('msg_berhasil');?>
                  </div>
                 <?php }else if(validation_errors()) { ?>
                   <div class="alert alert-warning alert-dismissible">
                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+                      <strong>Warning!</strong><br> <?= validation_errors(); ?>
                  </div>
               <?php  } ?>
 

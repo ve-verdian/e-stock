@@ -21,7 +21,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <?php foreach($avatar as $a){ ?>
-              <img src="<?php echo base_url('assets/upload/user/img/'.$a->nama_file)?>" class="user-image" alt="User Image">
+              <img src="<?= base_url('assets/upload/user/img/'.$a->nama_file)?>" class="user-image" alt="User Image">
               <?php } ?>
               <span class="hidden-xs"><?=$this->session->userdata('name')?></span>
             </a>
@@ -29,7 +29,7 @@
               <!-- User image -->
               <li class="user-header">
                 <?php foreach($avatar as $a){ ?>
-                <img src="<?php echo base_url('assets/upload/user/img/'.$a->nama_file)?>" class="img-circle" alt="User Image">
+                <img src="<?= base_url('assets/upload/user/img/'.$a->nama_file)?>" class="img-circle" alt="User Image">
                 <?php } ?>
 
                 <p>

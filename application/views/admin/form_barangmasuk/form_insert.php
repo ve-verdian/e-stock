@@ -42,14 +42,14 @@
               <?php if($this->session->flashdata('msg_berhasil')){ ?>
                 <div class="alert alert-success alert-dismissible" style="width:91%">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+                    <strong>Success!</strong><br> <?= $this->session->flashdata('msg_berhasil');?>
                </div>
               <?php } ?>
 
               <?php if(validation_errors()){ ?>
               <div class="alert alert-warning alert-dismissible">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+                  <strong>Warning!</strong><br> <?= validation_errors(); ?>
              </div>
             <?php } ?>
 
@@ -115,7 +115,7 @@
   </div>
   <!-- /.content-wrapper -->
 	<?php $this->load->view("admin/_layouts/footer.php") ?>
-	<script src="<?php echo base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="<?= base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
   <script type="text/javascript">
       $(".form_datetime").datetimepicker({
         format: 'dd/mm/yyyy',

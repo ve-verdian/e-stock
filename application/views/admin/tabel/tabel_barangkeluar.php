@@ -39,12 +39,12 @@
               <?php if($this->session->flashdata('msg_berhasil')){ ?>
                 <div class="alert alert-success alert-dismissible" style="width:100%">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+                    <strong>Success!</strong><br> <?= $this->session->flashdata('msg_berhasil');?>
                </div>
               <?php } ?>
 
               <a href="<?=base_url('admin/tabel_barangmasuk')?>" style="margin-bottom:10px;" type="button" class="btn btn-primary" name="tambah_data"><i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah Data Keluar</a>
-              <!-- <a href="<?=base_url('report/barangKeluarManual')?>" style="margin-bottom:10px;" type="button" class="btn btn-danger" name="laporan_data"><i class="fa fa-file-text" aria-hidden="true"></i> Invoice Manual</a> -->
+              <a href="<?=base_url('report/barangKeluarManual')?>" style="margin-bottom:10px;" type="button" class="btn btn-danger" name="laporan_data"><i class="fa fa-file-text" aria-hidden="true"></i> Invoice Manual</a>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -58,7 +58,7 @@
                   <!-- <th>Satuan</th> -->
 									<th width="5%"><center>Jumlah</th>
 									<th width="20%"><center>Unit Order</th>
-                  <!-- <th>Invoice</th> -->
+                  <th width="12%" >Invoice</th>
                   <!-- <th></th> -->
                 </tr>
                 </thead>
@@ -77,7 +77,7 @@
                     <!-- <td><?=$dd->satuan?></td> -->
 										<td width="5%"><center><?=$dd->jumlah?></td>
 										<td width="20%"><?=$dd->unit_order?></td>
-                    <!-- <td><a type="button" class="btn btn-danger btn-report"  href="<?=base_url('report/barangKeluar/'.$dd->id_transaksi.'/'.$dd->tanggal_keluar)?>" name="btn_report" style="margin:auto;"><i class="fa fa-file-text" aria-hidden="true"></i></a></td> -->
+                    <td><a type="button" class="btn btn-danger btn-report"  href="<?=base_url('report/barangKeluar/'.$dd->id_transaksi.'/'.$dd->tanggal_keluar)?>" name="btn_report" style="margin:auto;"><i class="fa fa-file-text" aria-hidden="true"></i></a></td>
                 </tr>
               <?php $no++; ?>
               <?php endforeach;?>

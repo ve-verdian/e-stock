@@ -182,13 +182,13 @@ footer a, footer a:link {
 
 <body>
   <div class="wrapper">
-  <form action="<?php echo base_url('login/proses_login')?>" class="login" method="post">
+  <form action="<?= base_url('login/proses_login')?>" class="login" method="post">
 
     <p class="title"><i class="fa fa-sign-in" aria-hidden="true"></i> Masuk</p>
     <?php if($this->session->flashdata('msg')){ ?>
       <div class="alert alert-warning alert-dismissible">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Warning!</strong><br> <?php echo $this->session->flashdata('msg');?>
+          <strong>Warning!</strong><br> <?= $this->session->flashdata('msg');?>
      </div>
     <?php } ?>
     <input type="text" name="username" placeholder="Username" autofocus required=""/>
@@ -198,11 +198,11 @@ footer a, footer a:link {
 
     <i class="fa fa-key"></i>
     <?php if(isset($token_generate)){ ?>
-    <input type="hidden" name="token" value="<?php echo $token_generate ?>">
+    <input type="hidden" name="token" value="<?= $token_generate ?>">
     <?php }else {
       redirect(base_url());
     }?>
-    <?php echo anchor(base_url('login/register'),'Sign Up') ?><br>
+    <?= anchor(base_url('login/register'),'Sign Up') ?><br>
     <!-- <a href="#">Forgot your password?</a> -->
     <button>
       <!-- <i class="spinner"></i> -->

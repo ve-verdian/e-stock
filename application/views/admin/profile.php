@@ -31,7 +31,7 @@
           <div class="box box-primary">
             <div class="box-body box-profile">
               <?php foreach($avatar as $a){ ?>
-              <img class="profile-user-img img-responsive img-circle" src="<?php echo base_url()?>assets/upload/user/img/<?= $a->nama_file?>" alt="User profile picture">
+              <img class="profile-user-img img-responsive img-circle" src="<?= base_url()?>assets/upload/user/img/<?= $a->nama_file?>" alt="User profile picture">
               <?php } ?>
               <h3 class="profile-username text-center"><?=$this->session->userdata('name')?></h3>
 
@@ -40,21 +40,21 @@
               <?php if($this->session->flashdata('msg_berhasil_gambar')){ ?>
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success</strong><br> <?php echo $this->session->flashdata('msg_berhasil_gambar');?>
+                    <strong>Success</strong><br> <?= $this->session->flashdata('msg_berhasil_gambar');?>
                </div>
               <?php } ?>
 
               <?php if($this->session->flashdata('msg_error_gambar')){ ?>
                 <div class="alert alert-danger alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Warning !</strong><br> <?php echo $this->session->flashdata('msg_error_gambar');?>
+                    <strong>Warning !</strong><br> <?= $this->session->flashdata('msg_error_gambar');?>
                </div>
               <?php } ?>
 
               <?php if(isset($pesan_error)){ ?>
               <div class="alert alert-danger alert-dismissible">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <strong>Warning!</strong><br> <?php echo $pesan; ?>
+                  <strong>Warning!</strong><br> <?= $pesan; ?>
              </div>
             <?php } ?>
 
@@ -110,14 +110,14 @@
                   <?php if($this->session->flashdata('msg_berhasil')){ ?>
                     <div class="alert alert-success alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Success</strong><br> <?php echo $this->session->flashdata('msg_berhasil');?>
+                        <strong>Success</strong><br> <?= $this->session->flashdata('msg_berhasil');?>
                    </div>
                   <?php } ?>
 
                   <?php if(validation_errors()){ ?>
                   <div class="alert alert-warning alert-dismissible">
                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+                      <strong>Warning!</strong><br> <?= validation_errors(); ?>
                  </div>
                 <?php } ?>
 
