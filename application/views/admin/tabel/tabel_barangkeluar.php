@@ -44,7 +44,7 @@
               <?php } ?>
 
               <a href="<?=base_url('admin/tabel_barangmasuk')?>" style="margin-bottom:10px;" type="button" class="btn btn-primary" name="tambah_data"><i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah Data Keluar</a>
-              <a href="<?=base_url('report/barangKeluarManual')?>" style="margin-bottom:10px;" type="button" class="btn btn-danger" name="laporan_data"><i class="fa fa-file-text" aria-hidden="true"></i> Invoice Manual</a>
+              <!-- <a href="<?=base_url('report/barangKeluarManual')?>" style="margin-bottom:10px;" type="button" class="btn btn-danger" name="laporan_data"><i class="fa fa-file-text" aria-hidden="true"></i> Invoice Manual</a> -->
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -58,7 +58,7 @@
                   <!-- <th>Satuan</th> -->
 									<th width="5%"><center>Jumlah</th>
 									<th width="20%"><center>Unit Order</th>
-                  <th width="12%" >Invoice</th>
+                  <!-- <th width="12%" >Invoice</th> -->
                   <!-- <th></th> -->
                 </tr>
                 </thead>
@@ -77,7 +77,7 @@
                     <!-- <td><?=$dd->satuan?></td> -->
 										<td width="5%"><center><?=$dd->jumlah?></td>
 										<td width="20%"><?=$dd->unit_order?></td>
-                    <td><a type="button" class="btn btn-danger btn-report"  href="<?=base_url('report/barangKeluar/'.$dd->id_transaksi.'/'.$dd->tanggal_keluar)?>" name="btn_report" style="margin:auto;"><i class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                    <!-- <td><a type="button" class="btn btn-danger btn-report"  href="<?=base_url('report/barangKeluar/'.$dd->id_transaksi.'/'.$dd->tanggal_keluar)?>" name="btn_report" style="margin:auto;"><i class="fa fa-file-text" aria-hidden="true"></i></a></td> -->
                 </tr>
               <?php $no++; ?>
               <?php endforeach;?>

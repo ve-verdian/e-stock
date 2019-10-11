@@ -73,8 +73,8 @@
                   <input type="text" name="nama_barang" readonly="readonly" style="width:80%;margin-right: 60px;" class="form-control" id="nama_Barang" value="<?=$d->nama_barang?>">
 							</div>
 							<div class="form-group" style="display:inline-block;">
-                  <label for="divisi" style="width:73%;">Unit Order</label>
-                  <select class="form-control" name="divisi" style="width:80%;display:inline;">
+                  <label for="unit_order" style="width:73%;">Unit Order</label>
+                  <select class="form-control" name="unit_order" style="width:80%;display:inline;">
 									<option value="" selected="">-- Pilih --</option>
                     <?php foreach($list_divisi as $ld){ ?>
                     <option value="<?=$ld->kode_divisi?>"><?=$ld->nama_divisi?></option>

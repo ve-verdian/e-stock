@@ -499,7 +499,7 @@ class Admin extends CI_Controller{
       $nama_barang    = $this->input->post('nama_barang',TRUE);
       $satuan         = $this->input->post('satuan',TRUE);
 			$jumlah         = $this->input->post('jumlah',TRUE);
-			$unit_order         = $this->input->post('unit_order',TRUE);
+			$unit_order     = $this->input->post('unit_order',TRUE);
 
       $where = array( 'id_transaksi' => $id_transaksi);
       $data = array(

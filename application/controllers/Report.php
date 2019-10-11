@@ -172,7 +172,7 @@ class Report extends CI_Controller
             $html .= '<td align="center">'.$d->id_transaksi.'</td>';
             $html .= '<td align="center">'.$d->tanggal_masuk.'</td>';
             $html .= '<td align="center">'.$d->tanggal_keluar.'</td>';
-            $html .= '<td align="center">'.$d->lokasi.'</td>';
+            $html .= '<td align="center">'.$d->divisi.'</td>';
             $html .= '<td align="center">'.$d->kode_barang.'</td>';
             $html .= '<td align="center">'.$d->nama_barang.'</td>';
             $html .= '<td align="center">'.$d->satuan.'</td>';
