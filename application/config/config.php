@@ -436,7 +436,11 @@ $config['standardize_newlines'] = FALSE;
 |          for backwards compatibility purposes!
 |
 */
+<<<<<<< HEAD
 $config['global_xss_filtering'] = TRUE;
+=======
+$config['global_xss_filtering'] = FALSE;
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 /*
 |--------------------------------------------------------------------------
@@ -479,7 +483,11 @@ $config['csrf_exclude_uris'] = array();
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
 */
+<<<<<<< HEAD
 $config['compress_output'] = TRUE;
+=======
+$config['compress_output'] = FALSE;
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 /*
 |--------------------------------------------------------------------------

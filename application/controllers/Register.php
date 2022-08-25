@@ -19,10 +19,17 @@ class Register extends CI_Controller {
 
   public function proses_register(){
 
+<<<<<<< HEAD
     $this->form_validation->set_rules('username','Username','required|trim');
 		$this->form_validation->set_rules('email','Email','required|trim|valid_email');
     $this->form_validation->set_rules('password','Password','required|trim');
     $this->form_validation->set_rules('confirm_password','Confirm Password','required|trim|matches[password]');
+=======
+    $this->form_validation->set_rules('username','Username','required');
+		$this->form_validation->set_rules('email','Email','required');
+    $this->form_validation->set_rules('password','Password','required');
+    $this->form_validation->set_rules('confirm_password','Confirm Password','required|matches[password]');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() == TRUE){
       $username = $this->input->post('username',TRUE);

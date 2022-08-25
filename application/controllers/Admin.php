@@ -5,7 +5,11 @@ class Admin extends CI_Controller{
 
   public function __construct(){
 		parent::__construct();
+<<<<<<< HEAD
 		$this->load->model('M_admin');
+=======
+    $this->load->model('M_admin');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
     $this->load->library('upload');
 	}
 
@@ -15,17 +19,26 @@ class Admin extends CI_Controller{
       $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
       $data['stokBarangMasuk'] = $this->M_admin->sum('tb_barang_masuk','jumlah');
       $data['stokBarangKeluar'] = $this->M_admin->sum('tb_barang_keluar','jumlah');      
+<<<<<<< HEAD
 			// $data['dataUser'] = $this->M_admin->numrows('user');
 			// $data['dataDivisi'] = $this->M_admin->numrows('tb_divisi');
 			$data['dataPC'] = $this->M_admin->numrows('tb_pc');
 			$data['dataPrinter'] = $this->M_admin->numrows('tb_printer');
+=======
+			$data['dataUser'] = $this->M_admin->numrows('user');
+			$data['dataDivisi'] = $this->M_admin->numrows('tb_divisi');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       $this->load->view('admin/index',$data);
     }else {
       $this->load->view('login/login');
     }
   }
 
+<<<<<<< HEAD
   public function signout(){
+=======
+  public function sigout(){
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
     session_destroy();
     redirect('login');
   }
@@ -36,7 +49,11 @@ class Admin extends CI_Controller{
 
   public function profile()
   {
+<<<<<<< HEAD
 		$data['title'] = 'Inventory EDP | User Profile';
+=======
+		$data['title'] = 'Inventory EDP| User Profile';
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
     $data['token_generate'] = $this->token_generate();
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->session->set_userdata($data);
@@ -55,10 +72,16 @@ class Admin extends CI_Controller{
 
   public function proses_new_password()
   {
+<<<<<<< HEAD
     $this->form_validation->set_rules('email','Email','required|trim');
     $this->form_validation->set_rules('new_password','New Password','required|trim');
 		$this->form_validation->set_rules('confirm_new_password','Confirm New Password','required|trim|matches[new_password]');
 		$this->form_validation->set_message('required', '{field} wajib diisi');
+=======
+    $this->form_validation->set_rules('email','Email','required');
+    $this->form_validation->set_rules('new_password','New Password','required');
+    $this->form_validation->set_rules('confirm_new_password','Confirm New Password','required|matches[new_password]');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() == TRUE)
     {
@@ -79,7 +102,11 @@ class Admin extends CI_Controller{
 
         $this->M_admin->update_password('user',$where,$data);
 
+<<<<<<< HEAD
         $this->session->set_flashdata('msg_berhasil','Password Telah di Ganti');
+=======
+        $this->session->set_flashdata('msg_berhasil','Password Telah Diganti');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
         redirect(base_url('admin/profile'));
       }
     }else {
@@ -144,6 +171,11 @@ class Admin extends CI_Controller{
            // End Profile
   ####################################
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   ####################################
               // Users
   ####################################
@@ -184,17 +216,28 @@ class Admin extends CI_Controller{
     $id = $this->uri->segment(3);
     $where = array('id' => $id);
     $this->M_admin->delete('user',$where);
+<<<<<<< HEAD
     $this->session->set_flashdata('msg_berhasil','User Berhasil di Hapus');
+=======
+    $this->session->set_flashdata('msg_berhasil','User Behasil di Hapus');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
     redirect(base_url('admin/users'));
   }
 
   public function proses_tambah_user()
   {
+<<<<<<< HEAD
     $this->form_validation->set_rules('username','Username','trim|required');
     $this->form_validation->set_rules('email','Email','trim|required|valid_email');
     $this->form_validation->set_rules('password','Password','trim|required');
 		$this->form_validation->set_rules('confirm_password','Confirm password','trim|required|matches[password]');
 		$this->form_validation->set_message('required', '{field} wajib diisi');
+=======
+    $this->form_validation->set_rules('username','Username','required');
+    $this->form_validation->set_rules('email','Email','required|valid_email');
+    $this->form_validation->set_rules('password','Password','required');
+    $this->form_validation->set_rules('confirm_password','Confirm password','required|matches[password]');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() == TRUE)
     {
@@ -214,8 +257,13 @@ class Admin extends CI_Controller{
         );
         $this->M_admin->insert('user',$data);
 
+<<<<<<< HEAD
         $this->session->set_flashdata('msg_berhasil','User Berhasil di Tambahkan');
         redirect(base_url('admin/users'));
+=======
+        $this->session->set_flashdata('msg_berhasil','User Berhasil Ditambahkan');
+        redirect(base_url('admin/form_user'));
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
         }
       }else {
         $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
@@ -225,8 +273,13 @@ class Admin extends CI_Controller{
 
   public function proses_update_user()
   {
+<<<<<<< HEAD
     $this->form_validation->set_rules('username','Username','trim|required');
     $this->form_validation->set_rules('email','Email','trim|required|valid_email');
+=======
+    $this->form_validation->set_rules('username','Username','required');
+    $this->form_validation->set_rules('email','Email','required|valid_email');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     
     if($this->form_validation->run() == TRUE)
@@ -245,7 +298,11 @@ class Admin extends CI_Controller{
               'role'         => $role,
         );
         $this->M_admin->update('user',$data,$where);
+<<<<<<< HEAD
         $this->session->set_flashdata('msg_berhasil','Data User Berhasil di Update');
+=======
+        $this->session->set_flashdata('msg_berhasil','Data User Berhasil Diupdate');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
         redirect(base_url('admin/users'));
        }
     }else{
@@ -258,6 +315,11 @@ class Admin extends CI_Controller{
            // End Users
   ####################################
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   ####################################
         // DATA BARANG MASUK
   ####################################
@@ -300,6 +362,7 @@ class Admin extends CI_Controller{
     redirect(base_url('admin/tabel_barangmasuk'));
   }
 
+<<<<<<< HEAD
   public function proses_databarang_masuk_insert()
   {
     $this->form_validation->set_rules('divisi','Divisi','trim|required');
@@ -307,11 +370,25 @@ class Admin extends CI_Controller{
     $this->form_validation->set_rules('nama_barang','Nama Barang','trim|required');
 		$this->form_validation->set_rules('jumlah','Jumlah','trim|required');
 		$this->form_validation->set_message('required', '{field} wajib diisi');
+=======
+
+
+  public function proses_databarang_masuk_insert()
+  {
+    $this->form_validation->set_rules('divisi','Divisi','required');
+    $this->form_validation->set_rules('kode_barang','Kode Barang','required');
+    $this->form_validation->set_rules('nama_barang','Nama Barang','required');
+    $this->form_validation->set_rules('jumlah','Jumlah','required');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() == TRUE)
     {
       $id_transaksi = $this->input->post('id_transaksi',TRUE);
+<<<<<<< HEAD
       $tanggal      = date_format(date_create($this->input->post('tanggal')), 'Y-m-d');
+=======
+      $tanggal      = $this->input->post('tanggal',TRUE);
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       $divisi       = $this->input->post('divisi',TRUE);
       $kode_barang  = $this->input->post('kode_barang',TRUE);
       $nama_barang  = $this->input->post('nama_barang',TRUE);
@@ -329,7 +406,11 @@ class Admin extends CI_Controller{
       );
       $this->M_admin->insert('tb_barang_masuk',$data);
 
+<<<<<<< HEAD
       $this->session->set_flashdata('msg_berhasil','Data Barang Berhasil di Tambahkan');
+=======
+      $this->session->set_flashdata('msg_berhasil','Data Barang Berhasil Ditambahkan');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       redirect(base_url('admin/form_barangmasuk'));
     }else {
       $data['list_satuan'] = $this->M_admin->select('tb_satuan');
@@ -339,15 +420,26 @@ class Admin extends CI_Controller{
 
   public function proses_databarang_masuk_update()
   {
+<<<<<<< HEAD
     $this->form_validation->set_rules('divisi','Divisi','trim|required');
     $this->form_validation->set_rules('kode_barang','Kode Barang','trim|required');
     $this->form_validation->set_rules('nama_barang','Nama Barang','trim|required');
     $this->form_validation->set_rules('jumlah','Jumlah','trim|required');
+=======
+    $this->form_validation->set_rules('divisi','Divisi','required');
+    $this->form_validation->set_rules('kode_barang','Kode Barang','required');
+    $this->form_validation->set_rules('nama_barang','Nama Barang','required');
+    $this->form_validation->set_rules('jumlah','Jumlah','required');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() == TRUE)
     {
       $id_transaksi = $this->input->post('id_transaksi',TRUE);
+<<<<<<< HEAD
       $tanggal      = date_format(date_create($this->input->post('tanggal')), 'Y-m-d');
+=======
+      $tanggal      = $this->input->post('tanggal',TRUE);
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       $divisi       = $this->input->post('divisi',TRUE);
       $kode_barang  = $this->input->post('kode_barang',TRUE);
       $nama_barang  = $this->input->post('nama_barang',TRUE);
@@ -365,6 +457,7 @@ class Admin extends CI_Controller{
             'jumlah'       => $jumlah
       );
       $this->M_admin->update('tb_barang_masuk',$data,$where);
+<<<<<<< HEAD
       $this->session->set_flashdata('msg_berhasil','Data Barang Berhasil di Update');
       redirect(base_url('admin/tabel_barangmasuk'));
     }else{
@@ -447,6 +540,19 @@ class Admin extends CI_Controller{
       // END DATA BARANG MASUK
 	####################################
 	
+=======
+      $this->session->set_flashdata('msg_berhasil','Data Barang Berhasil Diupdate');
+      redirect(base_url('admin/tabel_barangmasuk'));
+    }else{
+      $this->load->view('admin/form_barangmasuk/form_update');
+    }
+  }
+  ####################################
+      // END DATA BARANG MASUK
+  ####################################
+
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   ####################################
               // SATUAN
   ####################################
@@ -488,7 +594,10 @@ class Admin extends CI_Controller{
   {
     $this->form_validation->set_rules('kode_satuan','Kode Satuan','trim|required|max_length[100]');
     $this->form_validation->set_rules('nama_satuan','Nama Satuan','trim|required|max_length[100]');
+<<<<<<< HEAD
 		$this->form_validation->set_message('required', '{field} wajib diisi');
+=======
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() ==  TRUE)
     {
@@ -501,7 +610,11 @@ class Admin extends CI_Controller{
       );
       $this->M_admin->insert('tb_satuan',$data);
 
+<<<<<<< HEAD
       $this->session->set_flashdata('msg_berhasil','Data Satuan Berhasil di Tambahkan');
+=======
+      $this->session->set_flashdata('msg_berhasil','Data satuan Berhasil Ditambahkan');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       redirect(base_url('admin/form_satuan'));
     }else {
       $this->load->view('admin/form_satuan/form_insert');
@@ -529,7 +642,11 @@ class Admin extends CI_Controller{
       );
       $this->M_admin->update('tb_satuan',$data,$where);
 
+<<<<<<< HEAD
       $this->session->set_flashdata('msg_berhasil','Data Satuan Berhasil di Update');
+=======
+      $this->session->set_flashdata('msg_berhasil','Data satuan Berhasil Di Update');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       redirect(base_url('admin/tabel_satuan'));
     }else {
       $this->load->view('admin/form_satuan/form_update');
@@ -538,8 +655,14 @@ class Admin extends CI_Controller{
 
   ####################################
             // END SATUAN
+<<<<<<< HEAD
 	####################################
 	
+=======
+  ####################################
+
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   ####################################
      // DATA MASUK KE DATA KELUAR
   ####################################
@@ -558,12 +681,21 @@ class Admin extends CI_Controller{
 
   public function proses_data_keluar()
   {
+<<<<<<< HEAD
     $this->form_validation->set_rules('tanggal_keluar','Tanggal Keluar','required');
     if($this->form_validation->run() === TRUE)
     {
       $id_transaksi   = $this->input->post('id_transaksi',TRUE);
       $tanggal_masuk  = date_format(date_create($this->input->post('tanggal_masuk')), 'Y-m-d');
       $tanggal_keluar = date_format(date_create($this->input->post('tanggal_keluar')), 'Y-m-d');
+=======
+    $this->form_validation->set_rules('tanggal_keluar','Tanggal Keluar','trim|required');
+    if($this->form_validation->run() === TRUE)
+    {
+      $id_transaksi   = $this->input->post('id_transaksi',TRUE);
+      $tanggal_masuk  = $this->input->post('tanggal',TRUE);
+      $tanggal_keluar = $this->input->post('tanggal_keluar',TRUE);
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       $divisi         = $this->input->post('divisi',TRUE);
       $kode_barang    = $this->input->post('kode_barang',TRUE);
       $nama_barang    = $this->input->post('nama_barang',TRUE);
@@ -590,6 +722,7 @@ class Admin extends CI_Controller{
       $this->load->view('perpindahan_barang/form_update/'.$id_transaksi);
     }
 
+<<<<<<< HEAD
 	}
 	
 	public function cetak_barkel(){
@@ -666,10 +799,17 @@ class Admin extends CI_Controller{
 
 				$pdf->Output();
 		}
+=======
+  }
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   ####################################
     // END DATA MASUK KE DATA KELUAR
   ####################################
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   ####################################
         // DATA BARANG KELUAR
   ####################################
@@ -722,8 +862,12 @@ class Admin extends CI_Controller{
   public function proses_divisi_insert()
   {
     $this->form_validation->set_rules('kode_divisi','Kode Divisi','trim|required|max_length[150]');
+<<<<<<< HEAD
 		$this->form_validation->set_rules('nama_divisi','Nama Divisi','trim|required|max_length[150]');
 		$this->form_validation->set_message('required', '{field} wajib diisi');
+=======
+    $this->form_validation->set_rules('nama_divisi','Nama Divisi','trim|required|max_length[150]');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() ==  TRUE)
     {
@@ -736,7 +880,11 @@ class Admin extends CI_Controller{
       );
       $this->M_admin->insert('tb_divisi',$data);
 
+<<<<<<< HEAD
       $this->session->set_flashdata('msg_berhasil','Data Divisi Berhasil di Tambahkan');
+=======
+      $this->session->set_flashdata('msg_berhasil','Data Divisi Berhasil Ditambahkan');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
       redirect(base_url('admin/divisi'));
     }else {
       $this->load->view('admin/divisi/tambah_divisi');
@@ -769,6 +917,7 @@ class Admin extends CI_Controller{
     }else {
       $this->load->view('admin/divisi/update_divisi');
     }
+<<<<<<< HEAD
 	}
 	 ####################################
             // END DIVISI
@@ -1301,5 +1450,11 @@ class Admin extends CI_Controller{
             // END PRINTER
 	####################################
 	
+=======
+  }
+  ####################################
+            // END DIVISI
+  ####################################
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 }
 ?>

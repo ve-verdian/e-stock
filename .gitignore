@@ -3,6 +3,11 @@
 application/cache/*
 !application/cache/index.html
 
+<<<<<<< HEAD
+=======
+application/config/database.php
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 application/logs/*
 !application/logs/index.html
 

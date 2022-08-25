@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 if (!defined('BASEPATH'))
@@ -78,3 +79,16 @@ class M_barmas extends CI_Model
 
 }
 
+=======
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+ 
+class M_barmas extends CI_Model {
+ 
+    public function get_barmas()
+    {
+        $query = $this->db->get('tb_barang_masuk');
+        return $query->result_array();
+    }
+}
+?>
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555

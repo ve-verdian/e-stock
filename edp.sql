@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
+<<<<<<< HEAD
 -- Generation Time: Nov 07, 2019 at 07:22 AM
+=======
+-- Generation Time: Oct 04, 2019 at 05:40 AM
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -31,6 +35,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tb_barang_keluar` (
   `id` int(10) NOT NULL,
   `id_transaksi` varchar(50) NOT NULL,
+<<<<<<< HEAD
   `tanggal_masuk` date NOT NULL,
   `tanggal_keluar` date NOT NULL,
   `divisi` varchar(150) NOT NULL,
@@ -38,6 +43,15 @@ CREATE TABLE `tb_barang_keluar` (
   `nama_barang` varchar(100) NOT NULL,
   `satuan` varchar(50) NOT NULL,
   `jumlah` int(10) NOT NULL,
+=======
+  `tanggal_masuk` varchar(20) NOT NULL,
+  `tanggal_keluar` varchar(20) NOT NULL,
+  `lokasi` varchar(100) NOT NULL,
+  `kode_barang` varchar(100) NOT NULL,
+  `nama_barang` varchar(100) NOT NULL,
+  `satuan` varchar(50) NOT NULL,
+  `jumlah` varchar(10) NOT NULL,
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
   `unit_order` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -45,12 +59,17 @@ CREATE TABLE `tb_barang_keluar` (
 -- Dumping data for table `tb_barang_keluar`
 --
 
+<<<<<<< HEAD
 INSERT INTO `tb_barang_keluar` (`id`, `id_transaksi`, `tanggal_masuk`, `tanggal_keluar`, `divisi`, `kode_barang`, `nama_barang`, `satuan`, `jumlah`, `unit_order`) VALUES
 (18, 'WG-201981064973', '2019-10-01', '2019-10-01', 'EDP-IT', 'LP-001', 'Laptop HP', 'Pcs', 1, 'Marketing'),
 (19, 'WG-201924691387', '2019-10-04', '2010-10-05', 'EDP-IT', 'PR-0001', 'Printer Canon Pixma', 'Pcs', 1, 'Farmasi'),
 (20, 'WG-201992638154', '2019-10-01', '2019-10-05', 'EDP-IT', 'MO-003', 'Mouse Logitech', 'Pcs', 1, 'HRD'),
 (21, 'WG-201963058194', '2019-10-08', '2019-10-11', 'EDP-IT', 'PR-0002', 'Printer HP LaserJet', 'Pcs', 1, 'Administration'),
 (22, 'WG-201906893752', '2019-10-11', '2019-10-22', 'EDP-IT', 'LX-001', 'Printer Epson LX-310', 'Pcs', 1, 'Farmasi');
+=======
+INSERT INTO `tb_barang_keluar` (`id`, `id_transaksi`, `tanggal_masuk`, `tanggal_keluar`, `lokasi`, `kode_barang`, `nama_barang`, `satuan`, `jumlah`, `unit_order`) VALUES
+(18, 'WG-201981064973', '01/10/2019', '01/10/2019', 'EDP', 'LP-001', 'Laptop HP', 'Pcs', '1', 'Marketing');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 --
 -- Triggers `tb_barang_keluar`
@@ -73,6 +92,7 @@ DELIMITER ;
 
 CREATE TABLE `tb_barang_masuk` (
   `id_transaksi` varchar(50) NOT NULL,
+<<<<<<< HEAD
   `tanggal` date NOT NULL,
   `divisi` varchar(150) NOT NULL,
   `kode_barang` varchar(100) NOT NULL,
@@ -81,12 +101,21 @@ CREATE TABLE `tb_barang_masuk` (
   `jumlah` int(10) NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   `modified` datetime DEFAULT NULL ON UPDATE current_timestamp()
+=======
+  `tanggal` varchar(20) NOT NULL,
+  `lokasi` varchar(100) NOT NULL,
+  `kode_barang` varchar(100) NOT NULL,
+  `nama_barang` varchar(100) NOT NULL,
+  `satuan` varchar(50) NOT NULL,
+  `jumlah` varchar(10) NOT NULL
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_barang_masuk`
 --
 
+<<<<<<< HEAD
 INSERT INTO `tb_barang_masuk` (`id_transaksi`, `tanggal`, `divisi`, `kode_barang`, `nama_barang`, `satuan`, `jumlah`, `created`, `modified`) VALUES
 ('WG-201906893752', '2019-10-11', 'EDP-IT', 'LX-001', 'Printer Epson LX-310', 'Pcs', 3, '2019-11-05 09:03:57', NULL),
 ('WG-201924691387', '2019-10-04', 'EDP-IT', 'PR-0001', 'Printer Canon Pixma', 'Pcs', 4, '2019-11-05 09:03:57', NULL),
@@ -95,10 +124,18 @@ INSERT INTO `tb_barang_masuk` (`id_transaksi`, `tanggal`, `divisi`, `kode_barang
 ('WG-201991275380', '2019-10-01', 'EDP-IT', 'MO-002', 'Keyboard', 'Pcs', 5, '2019-11-05 09:03:57', NULL),
 ('WG-201992638154', '2019-10-01', 'EDP-IT', 'MO-003', 'Mouse Logitech', 'Pcs', 3, '2019-11-05 09:03:57', NULL),
 ('WG-201998430275', '2019-10-22', 'EDP-IT', 'PR-003', 'Printer E-Tiket Zebra', 'Pcs', 3, '2019-11-05 09:03:57', NULL);
+=======
+INSERT INTO `tb_barang_masuk` (`id_transaksi`, `tanggal`, `lokasi`, `kode_barang`, `nama_barang`, `satuan`, `jumlah`) VALUES
+('WG-201904859276', '01/10/2019', 'EDP-IT', 'MO-001', 'Monitor LG Flatron', 'Pcs', '5'),
+('WG-201981064973', '01/10/2019', 'EDP-IT', 'LP-001', 'Laptop HP', 'Pcs', '2'),
+('WG-201991275380', '01/10/2019', 'EDP-IT', 'MO-002', 'Keyboard', 'Pcs', '5'),
+('WG-201992638154', '01/10/2019', 'EDP-IT', 'MO-003', 'Mouse Logitech', 'Pcs', '5');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Table structure for table `tb_divisi`
 --
 
@@ -266,6 +303,25 @@ INSERT INTO `tb_printer` (`id_printer`, `tgl_input`, `kategori`, `merk`, `type`,
 (36, '2019-11-06', 'Printer', 'Canon', 'IP2770', 'HRJV96210', 1, '', 'Baik', 'Aktif', 'Back up sementara di pakai Rekam Medis Ranap', 'Hitam', 'MR - 05', 'Lantai 5', 0, 'Tidak', 'Vendor', 'MR - 05', '2019-11-05 15:22:13', '2019-11-06 11:01:40'),
 (37, '2019-11-06', 'Printer', 'Epson', 'LX-310', 'QTFY286906', 0, '', 'Baik', 'Aktif', 'Sudah di tes semuanya oke, di backup sementara menggunakan Epson LX-310 yang baru dengan SN : Q7FY453219', 'Abu-abu', 'F. Rajal', 'Lantai 5', 1, 'Tidak', 'RSIA Family', 'EDP / IT', '2019-11-06 10:53:56', '2019-11-06 14:37:02'),
 (39, '2019-11-07', 'Printer', 'Epson', 'LX-310', 'Q7FY210126', 0, '', 'Rusak', 'Aktif', 'Buat ngeprint macet, sekarang di backup printer punya F. Rajal dengan SN : Q7FY279307', 'Abu-abu', 'Adm. Ranap', 'Lobby', 1, 'Ya', 'Vendor', 'EDP / IT', '2019-11-07 12:46:49', '2019-11-07 12:47:49');
+=======
+-- Table structure for table `tb_satuan`
+--
+
+CREATE TABLE `tb_satuan` (
+  `id_satuan` int(11) NOT NULL,
+  `kode_satuan` varchar(100) NOT NULL,
+  `nama_satuan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_satuan`
+--
+
+INSERT INTO `tb_satuan` (`id_satuan`, `kode_satuan`, `nama_satuan`) VALUES
+(1, 'Dus', 'Dus'),
+(2, 'Pcs', 'Pcs'),
+(5, 'Pack', 'Pack');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 -- --------------------------------------------------------
 
@@ -273,18 +329,26 @@ INSERT INTO `tb_printer` (`id_printer`, `tgl_input`, `kategori`, `merk`, `type`,
 -- Table structure for table `tb_satuan`
 --
 
+<<<<<<< HEAD
 CREATE TABLE `tb_satuan` (
   `id_satuan` int(11) NOT NULL,
   `kode_satuan` varchar(100) NOT NULL,
   `nama_satuan` varchar(100) NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   `modified` datetime DEFAULT NULL ON UPDATE current_timestamp()
+=======
+CREATE TABLE `tb_divisi` (
+  `id_dvisi` int(11) NOT NULL,
+  `kode_divisi` varchar(150) NOT NULL,
+  `nama_divisi` varchar(150) NOT NULL
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_satuan`
 --
 
+<<<<<<< HEAD
 INSERT INTO `tb_satuan` (`id_satuan`, `kode_satuan`, `nama_satuan`, `created`, `modified`) VALUES
 (1, 'DS', 'Dus', '2019-11-05 09:09:46', NULL),
 (2, 'PC', 'Pcs', '2019-11-05 09:09:46', NULL),
@@ -293,6 +357,42 @@ INSERT INTO `tb_satuan` (`id_satuan`, `kode_satuan`, `nama_satuan`, `created`, `
 (7, 'BT', 'Batang', '2019-11-05 09:09:46', NULL),
 (8, 'ML', 'Milimeter', '2019-11-05 09:09:46', NULL);
 
+=======
+INSERT INTO `tb_divisi` (`id_divisi`, `kode_divisi`, `nama_divisi`) VALUES
+(1, 'Accounting' , 'Accounting'),
+(2, 'Administration' , 'Administration'),
+(3, 'Bayitabung-ffc' , 'Bayi Tabung - FFC'),
+(4, 'Diklat' , 'Diklat'),
+(5, 'Dokter' , 'Dokter'),
+(6, 'EDP-IT' , 'EDP - IT'),
+(7, 'Farmasi' , 'Farmasi'),
+(8, 'Finance' , 'Finance'),
+(9, 'Fisioterapi' , 'Fisioterapi'),
+(10, 'HRD' , 'HRD'),
+(11, 'IGD' , 'IGD'),
+(12, 'Kamar-Bayi' , 'Kamar Bayi'),
+(13, 'Lab' , 'Laboratorium'),
+(14, 'Lab-Cytogenetic' , 'Lab - Cytogenetic'),
+(15, 'Logistik' , 'Logistik'),
+(16, 'Marketing' , 'Marketing'),
+(17, 'Manajemen' , 'Manajemen'),
+(18, 'Medis-Penunjang' , 'Medis - Penunjang'),
+(19, 'MR' , 'MR'),
+(20, 'OK' , 'OK'),
+(21, 'PDCA' , 'PDCA'),
+(22, 'Perawatan-Lt.1' , 'Perawatan - Lt. 1'),
+(23, 'Perawatan-Lt.2' , 'Perawatan - Lt. 2'),
+(24, 'Perawatan-Lt.3' , 'Perawatan - Lt. 3'),
+(25, 'Poli-Anak' , 'Poli - Anak'),
+(26, 'Poli-Gigi' , 'Poli - Gigi'),
+(27, 'Poli-Obsgyn' , 'Poli - Obsgyn'),
+(28, 'Purchasing' , 'Purchasing'),
+(29, 'Radiologi' , 'Radiologi'),
+(30, 'Tax&Audit' , 'Tax & Audit'),
+(31, 'Umum' , 'Umum'),
+(32, 'VK' , 'VK'),
+(33, 'Others' , 'Others');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 -- --------------------------------------------------------
 
 --
@@ -311,10 +411,15 @@ CREATE TABLE `tb_upload_gambar_user` (
 --
 
 INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`, `ukuran_file`) VALUES
+<<<<<<< HEAD
 (1, 'user', 'nopic2.png', '6.33'),
 (2, 'admin', 'avatar5.png', '7.82'),
 (7, 'bambang', 'nopic2.png', '6.33'),
 (8, 'budi', 'nopic2.png', '6.33');
+=======
+(1, 'admin', 'nopic2.png', '6.33'),
+(2, 'user', 'nopic2.png', '6.33');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 -- --------------------------------------------------------
 
@@ -328,15 +433,20 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(200) NOT NULL,
   `role` tinyint(4) NOT NULL DEFAULT 0,
+<<<<<<< HEAD
   `last_login` varchar(20) NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   `modified` datetime DEFAULT NULL ON UPDATE current_timestamp()
+=======
+  `last_login` varchar(20) NOT NULL
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
+<<<<<<< HEAD
 INSERT INTO `user` (`id`, `username`, `email`, `password`, `role`, `last_login`, `created`, `modified`) VALUES
 (1, 'admin', 'admin@admin.com', '$2y$10$TVaKYRQt/aQwA.8Qy8pR7OqSgDPAgXIaVRcec9C6y2AZvyMt/V9NC', 1, '07-11-2019 2:08', '2019-11-05 09:10:57', '2019-11-07 08:08:40'),
 (2, 'naraku', 'naraku@gmail.com', '$2y$10$41Q5PhlKHjL6Ds.atmubZOSGrkhK6Va0UP39jVngEHf4GjYyeWI4C', 1, '08-10-2019 8:20', '2019-11-05 09:10:57', NULL),
@@ -346,6 +456,14 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`, `role`, `last_login`,
 (29, 'joko', 'joko@gmail.com', '$2y$10$NjPjpFy32IB.1BDiAtjbguQ4RRhdh5vRX0mzkPpShUIZT6WBaYIOG', 0, '23-10-2019 2:56', '2019-11-05 09:10:57', NULL),
 (30, 'budi', 'budi@gmail.com', '$2y$10$6AXEswbuyh4glrvN1n8EQuekIOuOjMtA2sPFkacfCNnTRN3ESLuKe', 0, '23-10-2019 3:02', '2019-11-05 09:10:57', NULL),
 (32, 'eko', 'eko@eko.com', '$2y$10$ESGFlxEgGMn9d1qlXNbq/OuYfb.t3FHZAR87gjFlhX6S6OCJA7r5K', 0, '23-10-2019 2:59', '2019-11-05 09:10:57', NULL);
+=======
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `role`, `last_login`) VALUES
+(1, 'administrator', 'administrator@gmail.com', '$2y$10$WZYOZcN05JHriS09.C6o7evdWIJ3Obj7vNHzuLunFIAZCDJtG6W1C', 1, '17-03-2018 11:47'),
+(2, 'coba', 'coba@gmail.com', '$2y$10$WRMyjAi8nnkr3J3QvzvyHuEoqay5dYd5NgMJKxsxtXKCp8.JCxZm.', 1, '15-01-2018 15:41'),
+(3, 'admin', 'admin@gmail.com', '$2y$10$3HNkMOtwX8X88Xb3DIveYuhXScTnJ9m16/rPDF1/VTa/VTisxVZ4i', 1, '04-10-2019 5:38'),
+(4, 'naraku', 'naraku@gmail.com', '$2y$10$41Q5PhlKHjL6Ds.atmubZOSGrkhK6Va0UP39jVngEHf4GjYyeWI4C', 0, '01-10-2019 7:09'),
+(5, 'user', 'user@gmail.com', '$2y$10$gImuxSLMUjGwH2kMaOtmMuJreLa0dIEVkHuE7GEkdma4wcoTtBKPC', 0, '04-10-2019 5:24');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 --
 -- Indexes for dumped tables
@@ -364,6 +482,7 @@ ALTER TABLE `tb_barang_masuk`
   ADD PRIMARY KEY (`id_transaksi`);
 
 --
+<<<<<<< HEAD
 -- Indexes for table `tb_divisi`
 --
 ALTER TABLE `tb_divisi`
@@ -388,6 +507,8 @@ ALTER TABLE `tb_printer`
   ADD PRIMARY KEY (`id_printer`);
 
 --
+=======
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 -- Indexes for table `tb_satuan`
 --
 ALTER TABLE `tb_satuan`
@@ -406,6 +527,7 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -438,26 +560,62 @@ ALTER TABLE `tb_pc`
 --
 ALTER TABLE `tb_printer`
   MODIFY `id_printer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+=======
+-- Indexes for table `user`
+--
+ALTER TABLE `tb_divisi`
+  ADD PRIMARY KEY (`id_divisi`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_barang_keluar`
+--
+ALTER TABLE `tb_barang_keluar`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 --
 -- AUTO_INCREMENT for table `tb_satuan`
 --
 ALTER TABLE `tb_satuan`
+<<<<<<< HEAD
   MODIFY `id_satuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+=======
+  MODIFY `id_satuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 --
 -- AUTO_INCREMENT for table `tb_upload_gambar_user`
 --
 ALTER TABLE `tb_upload_gambar_user`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
+<<<<<<< HEAD
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
+=======
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+COMMIT;
+
+--
+-- AUTO_INCREMENT for table `tb_satuan`
+--
+ALTER TABLE `tb_divisi`
+  MODIFY `id_divisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -44,8 +44,13 @@ class User extends CI_Controller
 
   public function proses_new_password()
   {
+<<<<<<< HEAD
     $this->form_validation->set_rules('new_password','New Password','required|trim');
     $this->form_validation->set_rules('confirm_new_password','Confirm New Password','required|trim|matches[new_password]');
+=======
+    $this->form_validation->set_rules('new_password','New Password','required');
+    $this->form_validation->set_rules('confirm_new_password','Confirm New Password','required|matches[new_password]');
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 
     if($this->form_validation->run() == TRUE)
     {
@@ -103,6 +108,7 @@ class User extends CI_Controller
     $this->load->view('user/templates/footer.php');
   }
 
+<<<<<<< HEAD
     ####################################
         // DATA KOMPUTER
   ####################################
@@ -127,6 +133,8 @@ class User extends CI_Controller
     $this->load->view('user/templates/footer.php');
   }
   
+=======
+>>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 }
 
 ?>
