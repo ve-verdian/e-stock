@@ -9,7 +9,6 @@ Aplikasi CRUD Menggunakan Codeigniter 3.1.10 dan AdminLTE 3.0.0-rc.1
 Username : admin<br>
 Password : admin
 
-<strong>User</strong><br>
 <strong>User Biasa</strong><br>
 Username : user<br>
 Password : abc123
