@@ -77,11 +77,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root', // sesuaikan dengan user kalian
-<<<<<<< HEAD
-	'password' => '', // sesuaikan dengan password kalian
-=======
-	'password' => 'IT_LAWU', // sesuaikan dengan password kalian
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+	'password' => '',
 	'database' => 'edp', // sesuaikan dengan database kalian
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

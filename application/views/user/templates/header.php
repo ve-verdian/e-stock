@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 
 <head>
   <title>Inventory EDP | User</title>
@@ -90,7 +89,7 @@
       </ul>
     </div>
   </nav>
-=======
+
   <head>
     <title>Inventory EDP | User</title>
     <link rel="shortcut icon" href="<?=base_url('assets/img/rsia_family.jpeg')?>">
@@ -164,4 +163,3 @@
           </ul>
       </div>
     </nav>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555

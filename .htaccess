@@ -1,15 +1,6 @@
 RewriteEngine on
-<<<<<<< HEAD
 RewriteBase /e-stock
-=======
-RewriteBase /edp
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 RewriteCond %{REQUEST_URI} ^/system.*
 RewriteRule ^(.*)$ /index.php/$1 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-<<<<<<< HEAD
-RewriteRule ^(.*)$ index.php/$1 [L]
-=======
-RewriteRule ^(.*)$ index.php/$1 [L]
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555

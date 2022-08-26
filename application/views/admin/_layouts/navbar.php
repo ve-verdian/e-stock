@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
   <!-- Left navbar links -->
@@ -25,7 +24,7 @@
   </ul>
 </nav>
 <!-- /.navbar -->
-=======
+
 <div class="wrapper">
 
   <header class="main-header">
@@ -96,4 +95,3 @@
       </div>
     </nav>
   </header>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555

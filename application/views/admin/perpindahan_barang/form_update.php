@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
   <title><?= $title; ?></title>
@@ -137,7 +136,7 @@
         </div>
         <!-- /.row -->
     </div><!-- /.container-fluid -->
-=======
+
 <head>
   <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
@@ -251,13 +250,12 @@
         <!--/.col (right) -->
       </div>
       <!-- /.row -->
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <?php $this->load->view("admin/_layouts/footer.php") ?>
-<<<<<<< HEAD
+
   <script src="<?= base_url()?>assets/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
   <script type="text/javascript">
   $(".form_datetime").datetimepicker({
@@ -270,20 +268,4 @@
   });
   </script>
   </body>
-
 </html>
-=======
-	<script src="<?= base_url()?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-  <script type="text/javascript">
-      $(".form_datetime").datetimepicker({
-        format: 'dd/mm/yyyy',
-        autoclose: true,
-        todayBtn: true,
-        pickTime: false,
-        minView: 2,
-       maxView: 4,
-      });
-  </script>
-  </body>
-  </html>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555

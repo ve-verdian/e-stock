@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -158,7 +157,7 @@
     });
     </script>
     </body>
-=======
+
 <html>
 <head>
   <title><?= $title; ?></title>
@@ -286,5 +285,4 @@ jQuery(document).ready(function($){
   });
 </script>
 </body>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 
 <head>
   <title><?= $title; ?></title>
@@ -143,7 +142,7 @@
     });
     </script>
     </body>
-=======
+
 <head>
   <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
@@ -265,5 +264,4 @@ jQuery(document).ready(function($){
   });
 </script>
 </body>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 </html>

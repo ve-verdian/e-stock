@@ -38,7 +38,7 @@
   </head>
 
   <body class="hold-transition sidebar-mini layout-fixed">
-=======
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,4 +83,4 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-red sidebar-mini">
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+

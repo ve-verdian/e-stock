@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <br><br>
 <div class="container text-center" style="margin: 2em auto;">
   <h2 class="tex-center">Data Barang Keluar</h2>
@@ -42,7 +41,7 @@
           <?php if(is_array($list_data)){ ?>
           <?php $no = 1;?>
           <?php foreach($list_data as $dd): ?>
-=======
+
 <br><br><br>
     <div class="container text-center" style="margin: 2em auto;">
     <h2 class="tex-center">Data Barang Keluar</h2>
@@ -70,14 +69,12 @@
         <?php if(is_array($list_data)){ ?>
         <?php $no = 1;?>
         <?php foreach($list_data as $dd): ?>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
           <td><?=$no?></td>
           <!-- <td><?=$dd->id_transaksi?></td> -->
           <td><?=$dd->tanggal_masuk?></td>
           <td><?=$dd->tanggal_keluar?></td>
           <td><?=$dd->divisi?></td>
           <td><?=$dd->kode_barang?></td>
-<<<<<<< HEAD
           <td><?=$dd->nama_barang?></td>
           <!-- <td><?=$dd->satuan?></td> -->
           <td><?=$dd->jumlah?></td>
@@ -93,31 +90,8 @@
     </table>
   <!-- </div> -->
 </div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#tabel_barangkeluar').DataTable();
-});
-=======
-					<td><?=$dd->nama_barang?></td>
-          <!-- <td><?=$dd->satuan?></td> -->
-					<td><?=$dd->jumlah?></td>
-					<td><?=$dd->unit_order?></td>
-          <!-- <td><a type="button" class="btn btn-danger btn-report"  href="<?=base_url('report/barangKeluar/'.$dd->id_transaksi.'/'.$dd->tanggal_keluar)?>" name="btn_report" style="margin:auto;"><i class="fa fa-file-text" aria-hidden="true"></i></a></td> -->
-      </tr>
-    <?php $no++; ?>
-    <?php endforeach;?>
-    <?php }else { ?>
-          <td colspan="7" align="center"><strong>Data Kosong</strong></td>
-    <?php } ?>
-    </tbody>
-  </table>
-  </div>
-</div>
-
 <script type="text/javascript">
   $(document).ready(function(){
     $('#tabel_barangkeluar').DataTable();
   });
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 </script>

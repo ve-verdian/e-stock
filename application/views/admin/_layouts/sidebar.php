@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
@@ -148,7 +147,7 @@
   </div>
   <!-- /.sidebar -->
 </aside>
-=======
+
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -229,4 +228,4 @@
     </section>
     <!-- /.sidebar -->
   </aside>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+

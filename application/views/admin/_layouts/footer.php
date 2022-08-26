@@ -53,7 +53,7 @@ $.widget.bridge('uibutton', $.ui.button)
 <!-- DataTables -->
 <script src="<?= base_url(); ?>assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="<?= base_url(); ?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-=======
+
  <!-- /.content-wrapper -->
  <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -102,4 +102,4 @@ $.widget.bridge('uibutton', $.ui.button)
 <!-- DataTables -->
 <script src="<?= base_url()?>assets/web_admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url()?>assets/web_admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+

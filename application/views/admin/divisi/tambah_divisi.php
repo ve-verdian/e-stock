@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
   <title><?= $title; ?></title>
@@ -91,7 +90,7 @@
     <?php $this->load->view("admin/_layouts/footer.php") ?>
     </body>
 </html>
-=======
+
 <head>
   <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
@@ -181,4 +180,4 @@
   <?php $this->load->view("admin/_layouts/footer.php") ?>
   </body>
   </html>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+

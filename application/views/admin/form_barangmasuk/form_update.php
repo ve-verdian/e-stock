@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
   <title><?= $title; ?></title>
@@ -122,7 +121,7 @@
         </div>
         <!-- /.row -->
     </div><!-- /.container-fluid -->
-=======
+
 <head>
   <title><?= $title; ?></title>
 	<?php $this->load->view("admin/_layouts/header.php") ?>
@@ -222,15 +221,12 @@
         <!--/.col (right) -->
       </div>
       <!-- /.row -->
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <?php $this->load->view("admin/_layouts/footer.php") ?>
   </body>
-<<<<<<< HEAD
 </html>
-=======
-  </html>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
+

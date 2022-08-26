@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -116,7 +115,7 @@
     <!-- /.content-wrapper -->
     <?php $this->load->view("admin/_layouts/footer.php") ?>
     </body>
-=======
+
 <html>
 <head>
 	<title><?= $title; ?></title>
@@ -243,5 +242,4 @@
   <!-- /.content-wrapper -->
 	<?php $this->load->view("admin/_layouts/footer.php") ?>
 	</body>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 </html>

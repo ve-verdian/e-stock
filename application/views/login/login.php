@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
 
 <head>
@@ -95,7 +94,7 @@
   <script src="<?= base_url(); ?>assets/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="<?= base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-=======
+
 <html >
 <head>
   <meta charset="UTF-8">
@@ -310,6 +309,5 @@ footer a, footer a:link {
   </p>
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 </body>
 </html>

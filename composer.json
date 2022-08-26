@@ -17,11 +17,7 @@
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
 	},
 	"require-dev": {
-<<<<<<< HEAD
 		"mikey179/vfsstream": "1.1.*",
-=======
-		"mikey179/vfsStream": "1.1.*",
->>>>>>> 3be6f91dfde298de5f65865ce6ea2be0989d0555
 		"phpunit/phpunit": "4.* || 5.*"
 	}
 }
