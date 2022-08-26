@@ -4,7 +4,6 @@
 <?php $this->load->view("admin/_layouts/header.php") ?>
 	<div class="wrapper">
 
-		
 	<?php
 	if(!isset($page)){
 		$this->load->view('admin/berkas/daftar_file');

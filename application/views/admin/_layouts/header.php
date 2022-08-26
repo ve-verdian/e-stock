@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="<?=base_url('assets/img/rsia_family.jpeg')?>">
